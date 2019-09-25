@@ -1,0 +1,66 @@
+@font-face {
+  font-family: IRANSemi;
+  src: url('../fonts/IRANSemiBold.eot');
+  src: url('../fonts/IRANSemiBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IRANSemiBold.woff') format('woff'),
+       url('../fonts/IRANSemiBold.ttf') format('truetype');
+  font-weight: normal;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #6d6d8f!important;
+  color:#fff!important;
+  margin: 0;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none; 
+       -moz-user-select: none;
+            user-select: none; 
+}
+
+#root{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex:1;
+  /* max-width: 1500px;
+  margin: 0 auto; */
+}
+
+*{
+    font-family: 'IRANSemi'!important;
+}
+.back{
+  position: absolute;
+  left: -2px;
+  top: -5px;
+  text-decoration: none;
+  color: #fff;
+  background: #6d6d8f;
+  padding: 5px 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 14px;
+  z-index: 99999;
+}
+.moving{
+  -webkit-transition: all 0.8s ease; 
+  -moz-transition: all 0.8s ease; 
+  transition:  all 0.8s ease;
+}
+.scale-in-center{-webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both}
+.focus-in-expand{-webkit-animation:focus-in-expand .4s cubic-bezier(.25,.46,.45,.94) both;animation:focus-in-expand .4s cubic-bezier(.25,.46,.45,.94) both}
+.pulsate-fwd{-webkit-animation:pulsate-fwd .5s ease-in-out infinite both;animation:pulsate-fwd .5s ease-in-out infinite both}
+.blur-out-contract-bck{-webkit-animation:blur-out-contract-bck .6s cubic-bezier(.55,.085,.68,.53) .5s both;animation:blur-out-contract-bck .6s cubic-bezier(.55,.085,.68,.53) .5s both}
+.slide-in-elliptic-top-fwd{-webkit-animation:slide-in-elliptic-top-fwd .7s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-elliptic-top-fwd .7s cubic-bezier(.25,.46,.45,.94) both}
+
+@-webkit-keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}
+
+@-webkit-keyframes focus-in-expand{0%{letter-spacing:-.5em;-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes focus-in-expand{0%{letter-spacing:-.5em;-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+
+@-webkit-keyframes pulsate-fwd{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(1.1);transform:scale(1.1)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes pulsate-fwd{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(1.1);transform:scale(1.1)}100%{-webkit-transform:scale(1);transform:scale(1)}}
+
+@-webkit-keyframes blur-out-contract-bck{0%{-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-filter:blur(.01);filter:blur(.01)}100%{letter-spacing:-.5em;-webkit-transform:translateZ(-500px);transform:translateZ(-500px);-webkit-filter:blur(12px) opacity(0);filter:blur(12px) opacity(0)}}@keyframes blur-out-contract-bck{0%{-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-filter:blur(.01);filter:blur(.01)}100%{letter-spacing:-.5em;-webkit-transform:translateZ(-500px);transform:translateZ(-500px);-webkit-filter:blur(12px) opacity(0);filter:blur(12px) opacity(0)}}
+
+@-webkit-keyframes slide-in-elliptic-top-fwd{0%{-webkit-transform:translateY(-600px) rotateX(-30deg) scale(0);transform:translateY(-600px) rotateX(-30deg) scale(0);-webkit-transform-origin:50% 100%;transform-origin:50% 100%;opacity:0}100%{-webkit-transform:translateY(0) rotateX(0) scale(1);transform:translateY(0) rotateX(0) scale(1);-webkit-transform-origin:50% 1400px;transform-origin:50% 1400px;opacity:1}}@keyframes slide-in-elliptic-top-fwd{0%{-webkit-transform:translateY(-600px) rotateX(-30deg) scale(0);transform:translateY(-600px) rotateX(-30deg) scale(0);-webkit-transform-origin:50% 100%;transform-origin:50% 100%;opacity:0}100%{-webkit-transform:translateY(0) rotateX(0) scale(1);transform:translateY(0) rotateX(0) scale(1);-webkit-transform-origin:50% 1400px;transform-origin:50% 1400px;opacity:1}}
